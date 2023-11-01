@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <title>Advance Login</title>
+	     <style>
+	       body
+	       {
+	       	 background-color:#00000080;
+	       }
+         .div1
+          {
+           background-color: pink;
+           border-radius: 4px;
+           height: 480px;
+           width: 550px;
+           text-align:center ;
+          }
+       </style>
+       <script type="text/javascript">
+	       function validation()
+	       {
+		     var F,L,E,P,B,A,x;
+		     F=document.getElementById('First Name').value;
+			   L=document.getElementById('Last Name').value;
+			   E=document.getElementById('Email ID').value;
+			   P=document.getElementById('Phone Number').value;
+			   B=document.getElementById('Arrival Date').value;
+			   A=document.getElementById('Aadhar Number').value;
+
+			   var operation=document.getElementById("Hotel or Resort").value;
+			   if(F=="" || L=="" || E=="" || P=="" || B=="" || A=="")
+             {
+               document.getElementById("Register").innerHTML="Please fill all the details for Registration"
+             }
+			   else if ( operation=="BALSAMAND LAKE PALACE AND RESORTS")
+			       {
+				       document.getElementById("Room Price").value=7000;
+				       document.getElementById("Register").innerHTML="Registration Successful"
+		         }
+			   else if ( operation=="AJIT BHAWAN")
+			       {
+               document.getElementById("Room Price").value=5600;
+             	 document.getElementById("Register").innerHTML="Registration Successful"
+			       }
+			   else if ( operation=="BIJOLI PALACE AND RESORT")
+			       {
+               document.getElementById("Room Price").value=5400;
+            	 document.getElementById("Register").innerHTML="Registration Successful"
+			       }
+			   else if ( operation=="PAAL HAVELI")
+			       {
+               document.getElementById("Room Price").value=6000;
+            	 document.getElementById("Register").innerHTML="Registration Successful"
+			       }
+			   else if ( operation=="RAAS")
+			       {
+				       document.getElementById("Room Price").value=6600;
+            	 document.getElementById("Register").innerHTML="Registration Successful"
+			       }
+			   else 
+			       {
+               document.getElementById("Register").innerHTML="Registration Not Successful Kindly Fill All The Information" 
+			       }
+		     }
+		     function calculateTotalPrice() 
+		     {
+    		   var NR=document.getElementById("No.of rooms").value;
+    		   var PR=document.getElementById("No.of staying days").value;
+    		   var RP=document.getElementById("Room Price").value;
+    		   document.getElementById("totalprice").innerHTML=(parseInt(RP)*parseInt(NR)*parseInt(PR));
+    	   }
+	     </script>
+  </head>
+  <body>
+   <section>
+  	 <center>
+	     <div class="div1" align="center">
+		   <h2>Registration</h2>
+		   <table>
+			     <tr><td>Select your Hotel or Resort:<font color="red">*</font>
+			      <select name="Hotel or Resort" id="Hotel or Resort">
+			      	  <option value="select" >Select your Hotel or Resort</option>
+             	  <option value="BALSAMAND LAKE PALACE AND RESORTS">BALSAMAND LAKE PALACE AND RESORTS</option>
+              	<option value="AJIT BHAWAN">AJIT BHAWAN</option>
+               	<option value="BIJOLI PALACE AND RESORT">BIJOLI PALACE AND RESORT</option>
+               	<option value="PAAL HAVELI">PAAL HAVELI</option>
+               	<option value="RAAS">RAAS</option>
+            </select></td></tr><br>
+           <tr><td>First Name:<font color="red">*</font><input id="First Name" type="text" placeholder="First Name" name="First Name"></td></tr>
+           <tr><td>Last Name:<font color="red">*</font><input id="Last Name" type="text" placeholder="Last Name" name="Last Name"></td></tr>
+			     <tr><td>Email:<font color="red">*</font><input id="Email ID" type="email" placeholder="Email ID" name="Email ID"></td></tr>
+		        <tr><td>Phone Number:<font color="red">*</font><input id="Phone Number" type="text" placeholder="Phone Number" name="Phone Number"></td></tr>
+			     <tr><td>Arrival Date:<font color="red">*</font><input id="Arrival Date" type="Date" placeholder="Arrival Date(DD/MM/YY)" name="Arrival Date"></td></tr>
+			     <tr><td>Aadhar Number:<font color="red">*</font><input id="Aadhar Number" type="text" placeholder="Aadhar Card Number" name="Aadhar Number"></td></tr>  
+		    </table>
+           <input type="submit" value="Register" class="button" onclick="validation()"><br><br>
+           <output for="price " id="Register"></output>     
+        <table align="center">
+           <tr><td>Room Price:<font color="red">*</font><input id="Room Price" type="text" name="Room Price"></td></tr>        
+			     <tr><td>No.of rooms:<font color="red">*</font><input id="No.of rooms" type="Number" placeholder="Two Adults One Child" name="No.of rooms"></td></tr>
+           <tr><td>No.of staying days:<font color="red">*</font><input id="No.of staying days" type="Number" name="No.of staying days" placeholder="Check out time 12:00PM"></td></tr>
+           <tr><td>PRICE IN Rs.<output for="price " id="totalprice"></output></td></tr>
+           <tr><td><input type="submit" id="submit" name="submit" onclick="calculateTotalPrice()"></td></tr>
+         </table>
+         <h3><a href="jodhluxury.html"> <font color="white">BACK</font></a></h3>      
+      </div>
+     </center>
+   </section>    
+ </body>
+</html>

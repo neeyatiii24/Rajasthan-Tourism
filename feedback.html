@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> FEEDBACKS </title>
+    </head>
+    <style>
+          p
+         {
+            color: blue;
+         }
+          textarea
+         {
+            font-family: times;
+            outline-color: darkred;
+         }
+          button
+         {
+          background-color: purple;
+          border-style: solid;
+          font-family: monospace;
+          width: 100px;
+          height: 40px;
+          color: white;
+         }          
+    </style>
+    <script type="text/javascript">
+         function execute ()
+         {
+          alert("YOUR RESPONSE HAS BEEN RECORDED")
+         }
+
+    </script>
+
+    <body bgcolor="pink">
+        <center>
+             <h1><u>FEEDBACKS</u></h1>
+ 
+             <p>
+                 Enter Your Full Name: <input type="text" name="FullName" id="FullName" placeholder="Example: Ms. Riya Sharma">
+                 <br><br>                
+                 Enter Your Email Id: <input type="text" name="EmailID" id="EmailId" placeholder="Example: abc@gmail.com">
+                 <br><br>
+                 Enter Your Contact No : <input type="text" name="ContactNO" id="ContactNO" placeholder="Example: 89XXXXXXXX">
+                 <br><br>
+                 Enter Your Feedback Here:
+                 <textarea rows="3" cols="30">
+                 </textarea>
+                 <br><br> 
+                 <button onclick="execute() ; location.reload()">SUBMIT</button>
+             </p>
+             <h2><a href="index.html">BACK TO HOME PAGE</a></h2>
+        </center>
+    </body>
+</html>
